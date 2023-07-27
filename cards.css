@@ -1,0 +1,74 @@
+.cards_holder {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    /* background: linear-gradient(126.6deg, rgba(124, 130, 177, .12) 28.69%, rgba(17, 18, 27, 0) 100%); */
+    border: 1px solid #292b3d;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(126deg, rgba(63, 62, 103, 1) 29%, rgba(77, 76, 139, 1) 57%, rgba(47, 48, 100, 1) 85%, rgba(38, 33, 97, 1) 100%);
+    /* background: rgb(0, 0, 0); */
+    /* background: linear-gradient(126deg, rgba(0, 0, 0, 1) 0%, rgba(63, 62, 103, 1) 29%, rgba(77, 76, 139, 1) 57%, rgba(47, 48, 100, 1) 85%, rgba(38, 33, 97, 1) 100%); */
+    width: 40%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search_div {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    margin: auto;
+    align-items: center;
+    background: linear-gradient(126deg, rgba(77, 76, 139, 1) 20%, rgba(47, 48, 100, 1) 85%, rgba(38, 33, 97, 1) 100%);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    border-left: 1px solid #fff;
+    border-top: 1px solid linear-gradient(126deg, rgba(77, 76, 139, 1) 20%, rgba(47, 48, 100, 1) 85%, rgba(38, 33, 97, 1) 100%);
+    background: linear-gradient(126deg, rgba(77, 76, 139, 1) 31%, rgba(47, 48, 100, 1) 67%, rgba(38, 33, 97, 1) 100%);
+}
+
+.line {
+    min-height: 20px;
+    width: 1%;
+    background-color: #fff;
+}
+
+.div_text {
+    text-align: left;
+}
+
+.face_card .line {
+    min-height: 30px;
+}
+
+.face_card {
+    border-radius: 30px;
+    width: 80%;
+    border-left: 0.4px solid #fff;
+    border-right: 0.4px solid #fff;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 40% 60%;
+    padding-bottom: 10px;
+    background: linear-gradient(126deg, rgba(77, 76, 139, 1) 31%, rgba(47, 48, 100, 1) 67%, rgba(38, 33, 97, 1) 100%);
+}
+
+.social {
+    background: linear-gradient(126deg, rgba(77, 76, 139, 1) 31%, rgba(47, 48, 100, 1) 67%, rgba(38, 33, 97, 1) 100%);
+    border-left: 0.4px solid #fff;
+    border-top: 1px solid linear-gradient(126deg, rgba(77, 76, 139, 1) 20%, rgba(47, 48, 100, 1) 85%, rgba(38, 33, 97, 1) 100%);
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

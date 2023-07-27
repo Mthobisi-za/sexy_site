@@ -76,13 +76,20 @@ p {
 
 .menu {
     width: 100%;
-    position: fixed;
+    position: sticky;
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     /* background-color: red; */
-    max-width: 100%;
-    position: relative;
-    margin-top: 10px;
+    max-width: 90%;
+    position: fixed;
+    /* margin-top: 10px; */
+    backdrop-filter: blur(4px);
+    padding-top: 10px;
+    z-index: 10;
+    overflow: scroll;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .menu_container:nth-child(2) {
@@ -220,11 +227,13 @@ p {
 
 .text_slidng {
     width: auto;
-    width: 100%;
+    width: 192%;
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
     gap: 50px;
+    animation: TextAnimation 10s infinite;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .slide_text {
@@ -232,23 +241,54 @@ p {
     color: #fff;
     font-family: 'Albert Sans', sans-serif;
     font-weight: lighter;
+    width: 24%;
+}
+
+.container_slide {
+    width: 100%;
+    overflow: hidden;
 }
 
 @keyframes TextAnimation {
     0% {
-        border-left: rgba(70, 62, 152, 0.89) 1px solid;
-        box-shadow: 0px 5px 0px 0px #141414;
+        position: relative;
+        left: 0%;
+    }
+    12.5% {
+        position: relative;
+        left: -12.5%;
     }
     25% {
-        border-left: rgba(70, 62, 152, 0.89) 1px solid;
-        box-shadow: 0px 5px 0px 0px #141414;
+        position: relative;
+        left: -25%;
+    }
+    37.5% {
+        position: relative;
+        left: -37.5%;
     }
     50% {
-        border-left: rgba(70, 62, 152, 0.89) 1.5px solid;
-        box-shadow: 0px 5px 0px 0px #141414;
+        position: relative;
+        left: -50%;
+    }
+    62.5% {
+        position: relative;
+        left: -37.5%;
+    }
+    75% {
+        position: relative;
+        left: -25%;
     }
     100% {
-        border-left: rgba(70, 62, 152, 0.89) 2px solid;
-        box-shadow: 0px 5px 0px 0px #141414;
+        position: relative;
+        left: 0%;
+        /* left: 12.5%; */
     }
+    /* from {
+        position: relative;
+        left: 12.5%;
+    }
+    to {
+        position: relative;
+        left: 100%;
+    } */
 }

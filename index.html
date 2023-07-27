@@ -5,10 +5,16 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400&display=swap');
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sexy Site</title>
+    <link rel="stylesheet" href="./cards.css">
+    <link rel="stylesheet" href="./bouncing.css">
+    <link rel="stylesheet" href="./moving_profiles.css">
+    <!-- <link rel="stylesheet" href="./parallex_scoll.css"> -->
 </head>
 
 <body>
@@ -92,34 +98,388 @@
     <div class="content_sliding">
         <p style="text-align: center;color: #939eb8;font-size: 16px;" class="text">BUILT FOR ALL TECH TALENTS</p>
         <br>
-        <div class="text_slidng">
-            <p class="slide_text">
-                Designers
-            </p>
-            <p class="slide_text">
-                Designers
-            </p>
-            <p class="slide_text">
-                Designers
-            </p>
-            <p class="slide_text">
-                Designers
-            </p>
-            <p class="slide_text">
-                Designers
-            </p>
-            <p class="slide_text">
-                Designers
-            </p>
-            <p class="slide_text">
-                Designers
-            </p>
-            <p class="slide_text">
-                Designers
-            </p>
+        <div class="container_slide">
+            <div class="text_slidng">
+                <p class="slide_text">
+                    Designers
+                </p>
+                <p class="slide_text">
+                    Developers
+                </p>
+                <p class="slide_text">
+                    Bloggers
+                </p>
+                <p class="slide_text">
+                    Animators
+                </p>
+                <p class="slide_text">
+                    Designers
+                </p>
+                <p class="slide_text">
+                    Developers
+                </p>
+                <p class="slide_text">
+                    Bloggers
+                </p>
+                <p class="slide_text">
+                    Animators
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="cards_holder">
+        <!-- <div class="cardb">
+            <div class="rowf">
+                b
+            </div>
+            <div class="row">
+                b
+            </div>
+            <div class="row">
+                b
+            </div>
+            <div class="row">
+                b
+            </div>
+
+        </div> -->
+
+        <div class="card">
+            <div class="search_div">
+                <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M21 21l-6 -6" />
+                  </svg></div>
+                <div class="line"></div>
+                <div class="div-text">
+                    <p>Product Designers</p>
+                </div>
+            </div> <br> <br>
+            <div class="face_card">
+                <div style="width: 90%;margin: auto;padding: 10px;">
+                    <img style="border-radius: 50%;width: 100px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI8AAACPCAMAAAD0vXihAAAAaVBMVEX///8jHyAAAAAgHB0IAAAeGRoXEhPa2trt7e339/fGxsZHRkYiHR/l5eVdXFyCgYERCgxQTk/R0dHAwMCZmJienp4uKyxWVVUnJCWOjo44NjZlZGSIiIg/PT6rqqoMAAWzs7N5eHhtbGyAwlPJAAAEsUlEQVR4nO2ca3OqQAyGJXvhJrCCCIJc9P//yMPWU6tSEcIG+4FnptOZc/rh7SabZJPYzWZlZWVlZWVlpYcTxF6SJF4cOJ+WsnHttPQLwQGAi8IvU9v9oJr4VABIwZilYUxIgOIUf0aM62WCC+uZ7t8y7wOHFIcgtz01mq2EcOkzciKQv4q5IiFa1LftCgbUaKCyl5NTQ99ven4E9VJyUs7eyumuG0+XkbN/Z6ubzfZLyEnHyukELXBCHowx1n+TgUctJ87Hy+kE5dSByFcT5FiW8mnlTHCeK7QuFEyyloblAaGe89Tj6Q7oTCfHZr9n0CG2jO6A9s1kOZbVkEVFN3+ftvqInKoa8qZ7j4YsKF6mxZ5v1IVGjlNhzNUZrKKpzWKcnE4QTdJoce7TOVBLoufIkXr4kURPiXPnzqFLEj1Id9YOTaJHTs2l3zBJoqdB62lI9Ix6Vfyqh5Po+Wv2OqD9+UCiJxx6sQ8hQxI9EToeRiR6anS+oHnJe+j4TFMABQXugrGCqIJGOjSRO6MdiKwR5CqMwZgi626eMR6t6B6EMUoPYYsDUZIRFWNX4ukezUk7QKepOYOfKOVs3BGd3nsEEI8OPDWlxbElShV3jO72apbo+E7oSVH2om64l9H98Msicye3HCcIyqXGYOcxt54vYaz/1IPTL41cbryjscPBsQGDcMHxl8ZNrZfvQ8atdPkJqrO3QPQlMQHWfsFhZXK6/epOXVnwUKMxBVZV39S4p4RYjXMByO7K87gut6CXAbheCYBtmd6l8yADuJAeVXvo0pfk9YN3BHG9P56O+zp+eEe4NZddAstbOjnH6/yfQfb+9tjZ9QYKoOnWdbba3eLy24m/3hb4/mHYkdgsKO6LVSXL177qlfLhZykehHH+FJIl5JHX/80dL8qfo7c0P7aMRT9DiEYW4TGxHcfVOI6dHMNCNv0SUppuidsvmlFM6lte+Lts5xf65r9ooomD0fwRPBvrga0QQnZfQ5WsNDq33GFbLT+onTk5oyvCIcDY2KmefzoaZagiCiZsSAzBwIgLuei+6jMyNFEVTV5JeI2JZQXHkLU0DOZnspMZZ76iZncXbJi+kvCaLcwN06OeWuOZ+yizf6nY58DEvAM6YjY2hmhmVYu4jY0h5m1zJOZizzcw5wl0MRWaf5Az0mpwMOvNGnbAZzECc80yWGT6dmka/LQQPcEdAj/ddSnM1RkMe+OR+1lv9WB70gYrnwc92CooMllq/KCwDk0QDTXYiOhmFNeru2AZzqEdn0iPj6tasfP2d2Dn8RTZ60sPMoOteob5a/781+IPfkF0GPz6qCKpNxRWziYx+xi8wmcU9BHB+2LWMhniAw5v5Mx8MEcG2y264TJ71a4Fc1WQMrGZHVy4mTgk+cVMD7qt3o6TR6iBqjWiRuOVDXq7V8N4UxrdLHHtswBkeBQKxJngc81JVH19WnnKuehPNFcR1VTXseuwEIrLMQclJFeiCFObdvjtxu0+LPQwWemZDnv4CNaWMT3rUfq/i3DfxkutBTh2m0Zl5lfFoTsvuNKdx6Go/KyM0pb4VF7JcgI79jz95wGSpPse24Hz+T8SsLKysrKysvK3+AfYcENiVGmSzgAAAABJRU5ErkJggg=="
+                        alt="">
+                </div>
+                <div>
+                    <p style="font-size: 20px;display: flex;align-items: center;justify-content: start;gap: 10px;">Gift Aba
+                        <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-asterisk" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                        <path d="M12 8.5v7" />
+                        <path d="M9 10l6 4" />
+                        <path d="M9 14l6 -4" />
+                      </svg></span> <span style="font-weight: lighter;font-size: 18px;">@gift</span></p>
+                    <p style="font-weight: lighter;">Graphic designer</p>
+                    <div style="display: grid;grid-template-columns: 20% 20% 20%;">
+                        <div class="social">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-blogger" width="30" height="30" viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#fff" fill="none " stroke-linecap="round " stroke-linejoin="round ">
+                                <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
+                                <path d="M8 21h8a5 5 0 0 0 5 -5v-3a3 3 0 0 0 -3 -3h-1v-2a5 5 0 0 0 -5 -5h-4a5 5 0 0 0 -5 5v8a5 5 0 0 0 5 5z " />
+                                <path d="M7 7m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h3a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-3a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                                <path d="M7 14m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-7a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                              </svg>
+                        </div>
+                        <div class="social">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-blogger" width="30" height="30" viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#fff" fill="none " stroke-linecap="round " stroke-linejoin="round ">
+                                <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
+                                <path d="M8 21h8a5 5 0 0 0 5 -5v-3a3 3 0 0 0 -3 -3h-1v-2a5 5 0 0 0 -5 -5h-4a5 5 0 0 0 -5 5v8a5 5 0 0 0 5 5z " />
+                                <path d="M7 7m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h3a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-3a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                                <path d="M7 14m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-7a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                              </svg>
+                        </div>
+                        <div class="social">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-blogger" width="30" height="30" viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#fff" fill="none " stroke-linecap="round " stroke-linejoin="round ">
+                                <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
+                                <path d="M8 21h8a5 5 0 0 0 5 -5v-3a3 3 0 0 0 -3 -3h-1v-2a5 5 0 0 0 -5 -5h-4a5 5 0 0 0 -5 5v8a5 5 0 0 0 5 5z " />
+                                <path d="M7 7m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h3a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-3a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                                <path d="M7 14m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-7a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                              </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="face_card" style="position: relative;margin-top: -100px;z-index: 10;left: 50px;transform: rotate(2deg);">
+                <div style="width: 90%;margin: auto;padding: 10px;">
+                    <img style="border-radius: 50%;width: 100px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI8AAACPCAMAAAD0vXihAAAAaVBMVEX///8jHyAAAAAgHB0IAAAeGRoXEhPa2trt7e339/fGxsZHRkYiHR/l5eVdXFyCgYERCgxQTk/R0dHAwMCZmJienp4uKyxWVVUnJCWOjo44NjZlZGSIiIg/PT6rqqoMAAWzs7N5eHhtbGyAwlPJAAAEsUlEQVR4nO2ca3OqQAyGJXvhJrCCCIJc9P//yMPWU6tSEcIG+4FnptOZc/rh7SabZJPYzWZlZWVlZWVlpYcTxF6SJF4cOJ+WsnHttPQLwQGAi8IvU9v9oJr4VABIwZilYUxIgOIUf0aM62WCC+uZ7t8y7wOHFIcgtz01mq2EcOkzciKQv4q5IiFa1LftCgbUaKCyl5NTQ99ven4E9VJyUs7eyumuG0+XkbN/Z6ubzfZLyEnHyukELXBCHowx1n+TgUctJ87Hy+kE5dSByFcT5FiW8mnlTHCeK7QuFEyyloblAaGe89Tj6Q7oTCfHZr9n0CG2jO6A9s1kOZbVkEVFN3+ftvqInKoa8qZ7j4YsKF6mxZ5v1IVGjlNhzNUZrKKpzWKcnE4QTdJoce7TOVBLoufIkXr4kURPiXPnzqFLEj1Id9YOTaJHTs2l3zBJoqdB62lI9Ix6Vfyqh5Po+Wv2OqD9+UCiJxx6sQ8hQxI9EToeRiR6anS+oHnJe+j4TFMABQXugrGCqIJGOjSRO6MdiKwR5CqMwZgi626eMR6t6B6EMUoPYYsDUZIRFWNX4ukezUk7QKepOYOfKOVs3BGd3nsEEI8OPDWlxbElShV3jO72apbo+E7oSVH2om64l9H98Msicye3HCcIyqXGYOcxt54vYaz/1IPTL41cbryjscPBsQGDcMHxl8ZNrZfvQ8atdPkJqrO3QPQlMQHWfsFhZXK6/epOXVnwUKMxBVZV39S4p4RYjXMByO7K87gut6CXAbheCYBtmd6l8yADuJAeVXvo0pfk9YN3BHG9P56O+zp+eEe4NZddAstbOjnH6/yfQfb+9tjZ9QYKoOnWdbba3eLy24m/3hb4/mHYkdgsKO6LVSXL177qlfLhZykehHH+FJIl5JHX/80dL8qfo7c0P7aMRT9DiEYW4TGxHcfVOI6dHMNCNv0SUppuidsvmlFM6lte+Lts5xf65r9ooomD0fwRPBvrga0QQnZfQ5WsNDq33GFbLT+onTk5oyvCIcDY2KmefzoaZagiCiZsSAzBwIgLuei+6jMyNFEVTV5JeI2JZQXHkLU0DOZnspMZZ76iZncXbJi+kvCaLcwN06OeWuOZ+yizf6nY58DEvAM6YjY2hmhmVYu4jY0h5m1zJOZizzcw5wl0MRWaf5Az0mpwMOvNGnbAZzECc80yWGT6dmka/LQQPcEdAj/ddSnM1RkMe+OR+1lv9WB70gYrnwc92CooMllq/KCwDk0QDTXYiOhmFNeru2AZzqEdn0iPj6tasfP2d2Dn8RTZ60sPMoOteob5a/781+IPfkF0GPz6qCKpNxRWziYx+xi8wmcU9BHB+2LWMhniAw5v5Mx8MEcG2y264TJ71a4Fc1WQMrGZHVy4mTgk+cVMD7qt3o6TR6iBqjWiRuOVDXq7V8N4UxrdLHHtswBkeBQKxJngc81JVH19WnnKuehPNFcR1VTXseuwEIrLMQclJFeiCFObdvjtxu0+LPQwWemZDnv4CNaWMT3rUfq/i3DfxkutBTh2m0Zl5lfFoTsvuNKdx6Go/KyM0pb4VF7JcgI79jz95wGSpPse24Hz+T8SsLKysrKysvK3+AfYcENiVGmSzgAAAABJRU5ErkJggg=="
+                        alt="">
+                </div>
+                <div>
+                    <p style="font-size: 20px;display: flex;align-items: center;justify-content: start;gap: 10px;">Gift Aba
+                        <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-asterisk" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                        <path d="M12 8.5v7" />
+                        <path d="M9 10l6 4" />
+                        <path d="M9 14l6 -4" />
+                      </svg></span> <span style="font-weight: lighter;font-size: 18px;">@gift</span></p>
+                    <p style="font-weight: lighter;">Graphic designer</p>
+                    <div style="display: grid;grid-template-columns: 20% 20% 20%;">
+                        <div class="social">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-blogger" width="30" height="30" viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#fff" fill="none " stroke-linecap="round " stroke-linejoin="round ">
+                                <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
+                                <path d="M8 21h8a5 5 0 0 0 5 -5v-3a3 3 0 0 0 -3 -3h-1v-2a5 5 0 0 0 -5 -5h-4a5 5 0 0 0 -5 5v8a5 5 0 0 0 5 5z " />
+                                <path d="M7 7m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h3a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-3a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                                <path d="M7 14m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-7a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                              </svg>
+                        </div>
+                        <div class="social">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-blogger" width="30" height="30" viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#fff" fill="none " stroke-linecap="round " stroke-linejoin="round ">
+                                <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
+                                <path d="M8 21h8a5 5 0 0 0 5 -5v-3a3 3 0 0 0 -3 -3h-1v-2a5 5 0 0 0 -5 -5h-4a5 5 0 0 0 -5 5v8a5 5 0 0 0 5 5z " />
+                                <path d="M7 7m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h3a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-3a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                                <path d="M7 14m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-7a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                              </svg>
+                        </div>
+                        <div class="social">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-blogger" width="30" height="30" viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#fff" fill="none " stroke-linecap="round " stroke-linejoin="round ">
+                                <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
+                                <path d="M8 21h8a5 5 0 0 0 5 -5v-3a3 3 0 0 0 -3 -3h-1v-2a5 5 0 0 0 -5 -5h-4a5 5 0 0 0 -5 5v8a5 5 0 0 0 5 5z " />
+                                <path d="M7 7m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h3a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-3a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                                <path d="M7 14m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-7a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                              </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="face_card" style="position: relative;margin-top: 0px;z-index: 10;left: 20px;">
+                <div style="width: 90%;margin: auto;padding: 10px;">
+                    <img style="border-radius: 50%;width: 100px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI8AAACPCAMAAAD0vXihAAAAaVBMVEX///8jHyAAAAAgHB0IAAAeGRoXEhPa2trt7e339/fGxsZHRkYiHR/l5eVdXFyCgYERCgxQTk/R0dHAwMCZmJienp4uKyxWVVUnJCWOjo44NjZlZGSIiIg/PT6rqqoMAAWzs7N5eHhtbGyAwlPJAAAEsUlEQVR4nO2ca3OqQAyGJXvhJrCCCIJc9P//yMPWU6tSEcIG+4FnptOZc/rh7SabZJPYzWZlZWVlZWVlpYcTxF6SJF4cOJ+WsnHttPQLwQGAi8IvU9v9oJr4VABIwZilYUxIgOIUf0aM62WCC+uZ7t8y7wOHFIcgtz01mq2EcOkzciKQv4q5IiFa1LftCgbUaKCyl5NTQ99ven4E9VJyUs7eyumuG0+XkbN/Z6ubzfZLyEnHyukELXBCHowx1n+TgUctJ87Hy+kE5dSByFcT5FiW8mnlTHCeK7QuFEyyloblAaGe89Tj6Q7oTCfHZr9n0CG2jO6A9s1kOZbVkEVFN3+ftvqInKoa8qZ7j4YsKF6mxZ5v1IVGjlNhzNUZrKKpzWKcnE4QTdJoce7TOVBLoufIkXr4kURPiXPnzqFLEj1Id9YOTaJHTs2l3zBJoqdB62lI9Ix6Vfyqh5Po+Wv2OqD9+UCiJxx6sQ8hQxI9EToeRiR6anS+oHnJe+j4TFMABQXugrGCqIJGOjSRO6MdiKwR5CqMwZgi626eMR6t6B6EMUoPYYsDUZIRFWNX4ukezUk7QKepOYOfKOVs3BGd3nsEEI8OPDWlxbElShV3jO72apbo+E7oSVH2om64l9H98Msicye3HCcIyqXGYOcxt54vYaz/1IPTL41cbryjscPBsQGDcMHxl8ZNrZfvQ8atdPkJqrO3QPQlMQHWfsFhZXK6/epOXVnwUKMxBVZV39S4p4RYjXMByO7K87gut6CXAbheCYBtmd6l8yADuJAeVXvo0pfk9YN3BHG9P56O+zp+eEe4NZddAstbOjnH6/yfQfb+9tjZ9QYKoOnWdbba3eLy24m/3hb4/mHYkdgsKO6LVSXL177qlfLhZykehHH+FJIl5JHX/80dL8qfo7c0P7aMRT9DiEYW4TGxHcfVOI6dHMNCNv0SUppuidsvmlFM6lte+Lts5xf65r9ooomD0fwRPBvrga0QQnZfQ5WsNDq33GFbLT+onTk5oyvCIcDY2KmefzoaZagiCiZsSAzBwIgLuei+6jMyNFEVTV5JeI2JZQXHkLU0DOZnspMZZ76iZncXbJi+kvCaLcwN06OeWuOZ+yizf6nY58DEvAM6YjY2hmhmVYu4jY0h5m1zJOZizzcw5wl0MRWaf5Az0mpwMOvNGnbAZzECc80yWGT6dmka/LQQPcEdAj/ddSnM1RkMe+OR+1lv9WB70gYrnwc92CooMllq/KCwDk0QDTXYiOhmFNeru2AZzqEdn0iPj6tasfP2d2Dn8RTZ60sPMoOteob5a/781+IPfkF0GPz6qCKpNxRWziYx+xi8wmcU9BHB+2LWMhniAw5v5Mx8MEcG2y264TJ71a4Fc1WQMrGZHVy4mTgk+cVMD7qt3o6TR6iBqjWiRuOVDXq7V8N4UxrdLHHtswBkeBQKxJngc81JVH19WnnKuehPNFcR1VTXseuwEIrLMQclJFeiCFObdvjtxu0+LPQwWemZDnv4CNaWMT3rUfq/i3DfxkutBTh2m0Zl5lfFoTsvuNKdx6Go/KyM0pb4VF7JcgI79jz95wGSpPse24Hz+T8SsLKysrKysvK3+AfYcENiVGmSzgAAAABJRU5ErkJggg=="
+                        alt="">
+                </div>
+                <div>
+                    <p style="font-size: 20px;display: flex;align-items: center;justify-content: start;gap: 10px;">Gift Aba
+                        <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-asterisk" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                        <path d="M12 8.5v7" />
+                        <path d="M9 10l6 4" />
+                        <path d="M9 14l6 -4" />
+                      </svg></span> <span style="font-weight: lighter;font-size: 18px;">@gift</span></p>
+                    <p style="font-weight: lighter;">Graphic designer</p>
+                    <div style="display: grid;grid-template-columns: 20% 20% 20%;">
+                        <div class="social">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-blogger" width="30" height="30" viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#fff" fill="none " stroke-linecap="round " stroke-linejoin="round ">
+                                <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
+                                <path d="M8 21h8a5 5 0 0 0 5 -5v-3a3 3 0 0 0 -3 -3h-1v-2a5 5 0 0 0 -5 -5h-4a5 5 0 0 0 -5 5v8a5 5 0 0 0 5 5z " />
+                                <path d="M7 7m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h3a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-3a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                                <path d="M7 14m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-7a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                              </svg>
+                        </div>
+                        <div class="social">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-blogger" width="30" height="30" viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#fff" fill="none " stroke-linecap="round " stroke-linejoin="round ">
+                                <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
+                                <path d="M8 21h8a5 5 0 0 0 5 -5v-3a3 3 0 0 0 -3 -3h-1v-2a5 5 0 0 0 -5 -5h-4a5 5 0 0 0 -5 5v8a5 5 0 0 0 5 5z " />
+                                <path d="M7 7m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h3a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-3a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                                <path d="M7 14m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-7a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                              </svg>
+                        </div>
+                        <div class="social">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-blogger" width="30" height="30" viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#fff" fill="none " stroke-linecap="round " stroke-linejoin="round ">
+                                <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
+                                <path d="M8 21h8a5 5 0 0 0 5 -5v-3a3 3 0 0 0 -3 -3h-1v-2a5 5 0 0 0 -5 -5h-4a5 5 0 0 0 -5 5v8a5 5 0 0 0 5 5z " />
+                                <path d="M7 7m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h3a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-3a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                                <path d="M7 14m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-7a1.5 1.5 0 0 1 -1.5 -1.5z " />
+                              </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div> <br> <br>
+    <div class="profile">
+        <div class="container_p">
+            <div class="p_slide">
+                <div class="row_p">
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row_p_l">
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                    <div class="column_p">
+                        <img class="img_p" src="https://cdn.tabulio.com/images/1lcgldxlf/1lcgldxlf-large.webp" alt="">
+                        <div style="display: flex;padding: 20px;gap: 10px;">
+                            <div>
+                                <div class="thumbnail-wrapper" data-v-3b7d2e4d=""><img src="https://cdn.tabulio.com/profile_pics/1l3w4xsyr/1l3w4xsyr-small.webp" style="width: 40px;border-radius: 50%;"></div>
+                            </div>
+                            <p>Prince Chijioke</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
 </body>
+<script src="./parallex.js "></script>
 
 </html>

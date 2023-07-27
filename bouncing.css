@@ -1,0 +1,36 @@
+.cardb {
+    /* background: linear-gradient(126.6deg, rgba(124, 130, 177, .12) 28.69%, rgba(17, 18, 27, 0) 100%); */
+    border: 1px solid #292b3d;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 40%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(126.6deg, rgba(124, 130, 177, .12) 28.69%, rgba(17, 18, 27, 0) 100%);
+}
+
+.cardb {
+    min-height: 10vh;
+    max-height: 5vh;
+}
+
+.row {
+    border-left: #fff solid 1px;
+    width: 30%;
+}
+
+.rowf {
+    width: 30%;
+}
+
+.cards_holderf {
+    /* width: 80%; */
+    width: 40%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}

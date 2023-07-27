@@ -1,0 +1,50 @@
+.bg_animations {
+    min-height: 110vh;
+    background-image: url('https://uploads-ssl.webflow.com/62443d15248af30a21e60133/62568b2bf20c69e25b1be8bd_sphere-3.png');
+    background-repeat: no-repeat;
+    background-position: 30% 15%;
+    background-size: 40px;
+}
+
+.animations_wrapper {
+    display: grid;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.animations_wrapper div:nth-child(1) {
+    perspective: 10px;
+    left: 20px;
+}
+
+.parallex_ele:nth-child(1) {
+    width: 40px;
+}
+
+.parallex_ele:nth-child(2) {
+    perspective: 20px;
+}
+
+.parallex_ele:nth-child(2) {
+    width: 80px;
+}
+
+.parallex_ele:nth-child(3) {
+    perspective: 30px;
+}
+
+.parallex_ele:nth-child(3) {
+    width: 60px;
+}
+
+.parallex_ele:nth-child(4) {
+    perspective: 40px;
+}
+
+.parallex_ele:nth-child(5) {
+    perspective: 50px;
+}
+
+.parallex_ele {
+    /* transform: translate(-50% -50%); */
+}
