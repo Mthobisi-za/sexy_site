@@ -93,3 +93,34 @@
         right: 0px;
     }
 }
+
+
+/* new */
+
+@keyframes scrollTextStart {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scrollTextEnd {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+text:nth-child(1) {
+    animation: scrollTextStart 2s infinite linear;
+    fill: #fff;
+}
+
+text:nth-child(2) {
+    animation: scrollTextEnd 2s infinite linear;
+    fill: #fff;
+}

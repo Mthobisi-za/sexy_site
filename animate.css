@@ -1,0 +1,39 @@
+.section_2 {
+    width: 100%;
+    position: absolute;
+}
+
+.bg_section {
+    position: relative;
+    z-index: 5;
+    height: 150vh;
+}
+
+.svg_s {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+svg {
+    max-width: 100%;
+}
+
+.bg_top_wrapper {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bg_top_wrapper .mg_buble_big {}
+
+.bg_top_wrapper .mg_buble_small {
+    width: 10%;
+}
