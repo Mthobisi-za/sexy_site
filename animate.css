@@ -1,6 +1,7 @@
 .section_2 {
     width: 100%;
-    position: absolute;
+    position: relative;
+    margin-top: 100px;
 }
 
 .bg_section {
@@ -19,6 +20,18 @@
     position: absolute;
     top: 0;
     z-index: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.svg_1 {
+    text-align: right;
+}
+
+.svg_2 {
+    text-align: right;
 }
 
 svg {
@@ -26,7 +39,7 @@ svg {
 }
 
 .bg_top_wrapper {
-    height: 50vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
