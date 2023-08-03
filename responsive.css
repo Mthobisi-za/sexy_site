@@ -1,0 +1,12 @@
+@media (max-width:1862px) {
+    .content_sliding {
+        margin-top: 100px;
+    }
+    .text {
+        font-size: 30px!important;
+    }
+}
+
+.menu {
+    z-index: 1000!important;
+}

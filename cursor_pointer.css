@@ -1,0 +1,6 @@
+.menu_container p,
+.menu_container img,
+.menu_container svg,
+.btn_2 {
+    cursor: pointer;
+}

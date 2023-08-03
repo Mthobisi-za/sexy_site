@@ -1,0 +1,70 @@
+.section_4 {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#Figma,
+#Figma_2,
+#Figma_3,
+#Figma_4,
+#Figma_5,
+#Figma_6,
+#Figma_7 {
+    fill: url(#pattern7)
+}
+
+.svg_random {
+    /* width: 50%; */
+    margin: auto;
+    text-align: center;
+}
+
+.svg_random svg {
+    width: 100%;
+}
+
+.resize_div_rando>rect:last-child {
+    animation: increase 2s ease-in-out infinite;
+}
+
+@keyframes increase {
+    0% {
+        /* scale: 0.99; */
+        background-color: red;
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.99);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.section_4 .subtitle {
+    font-family: Albert Sans, sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.section_4 .title {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Albert Sans, sans-serif;
+}
+
+.section_4 .infor,
+.section_4 .list {
+    font-size: 20px;
+    color: #a7a7af;
+    font-weight: lighter;
+}
+
+.section_4 li {
+    color: #a7a7af;
+    font-weight: lighter;
+}
