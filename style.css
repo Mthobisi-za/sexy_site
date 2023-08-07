@@ -226,7 +226,7 @@ p {
 .content_sliding {
     position: relative;
     margin-top: 400px;
-    z-index: 1;
+    z-index: 0;
 }
 
 .text_slidng {
