@@ -43,6 +43,9 @@ svg {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .bg_top_wrapper .mg_buble_big {}

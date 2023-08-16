@@ -90,7 +90,7 @@ p {
     backdrop-filter: blur(4px);
     padding-top: 10px;
     z-index: 10;
-    overflow: scroll;
+    /* overflow: scroll; */
     left: 0;
     right: 0;
     margin: auto;
